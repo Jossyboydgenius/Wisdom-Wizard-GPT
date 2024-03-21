@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Authenticated, AuthLoading, ConvexReactClient } from "convex/react";
+import { Authenticated, AuthLoading, ConvexReactClient, Unauthenticated } from "convex/react";
 
 interface ConvexClientProviderProps {
     children: React.ReactNode;
@@ -19,7 +19,12 @@ export const ConvexClientProvider = ({
                 <AuthLoading>
                     <Loading />
                 </AuthLoading>
+                < Authenticated>
+                {children}
                 </Authenticated>
+                <Unauthenticated>
+                {children}    
+                </Unauthenticated> 
             </ConvexClientProviderWithClerk>
         </ClerkProvider>
     )
