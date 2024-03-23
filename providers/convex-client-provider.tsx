@@ -31,3 +31,4 @@ export const ConvexClientProvider = ({
         </ClerkProvider>
     )
 }
+
