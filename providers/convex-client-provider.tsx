@@ -18,9 +18,9 @@ export const ConvexClientProvider = ({
     return (
         <ClerkProvider afterSignUpUrl="/sign-up">
             <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
-                <AuthLoading>
+                {/* <AuthLoading>
                     <Loading />
-                </AuthLoading>
+                </AuthLoading> */}
                 <Authenticated>
                     {children}
                 </Authenticated>
