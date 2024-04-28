@@ -33,6 +33,3 @@ export const ConvexClientProvider = ({
     )
 }
 
-
-
-
