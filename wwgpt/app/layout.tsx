@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ConvexClientProvider>
-          {children}
+        {children}
         </ConvexClientProvider>
         </body>
     </html>
