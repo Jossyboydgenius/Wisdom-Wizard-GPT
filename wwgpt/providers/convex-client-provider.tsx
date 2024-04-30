@@ -14,22 +14,17 @@ const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL!;
 const convex = new ConvexReactClient(convexUrl);
 
 export const ConvexClientProvider = ({
-    children
+  children,
 }: ConvexClientProviderProps) => {
-    return (
-        <ClerkProvider afterSignUpUrl="/sign-up">
-            <ConvexProviderWithClerk useAuth={useAuth} client={convex} children={undefined}>
-                {/* <AuthLoading>
+  return (
+    <ClerkProvider afterSignUpUrl="/sign-up">
+      <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
+        {/* <AuthLoading>
                     <Loading />
                 </AuthLoading> */}
-                <Authenticated children={undefined}>
-                    {children}
-                </Authenticated>
-                <Unauthenticated children={undefined}>
-                    {children}
-                </Unauthenticated>
-            </ConvexProviderWithClerk>
-        </ClerkProvider>
-    )
-}
-export default ConvexClientProvider;
+        <Authenticated>{children}</Authenticated>
+        <Unauthenticated>{children}</Unauthenticated>
+      </ConvexProviderWithClerk>
+    </ClerkProvider>
+  );
+};

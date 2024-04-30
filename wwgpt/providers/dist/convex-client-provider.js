@@ -12,8 +12,7 @@ var convex = new react_2.ConvexReactClient(convexUrl);
 exports.ConvexClientProvider = function (_a) {
     var children = _a.children;
     return (react_1["default"].createElement(nextjs_1.ClerkProvider, { afterSignUpUrl: "/sign-up" },
-        react_1["default"].createElement(react_clerk_1.ConvexProviderWithClerk, { useAuth: nextjs_1.useAuth, client: convex, children: undefined },
-            react_1["default"].createElement(react_2.Authenticated, { children: undefined }, children),
-            react_1["default"].createElement(react_2.Unauthenticated, { children: undefined }, children))));
+        react_1["default"].createElement(react_clerk_1.ConvexProviderWithClerk, { useAuth: nextjs_1.useAuth, client: convex },
+            react_1["default"].createElement(react_2.Authenticated, null, children),
+            react_1["default"].createElement(react_2.Unauthenticated, null, children))));
 };
-exports["default"] = exports.ConvexClientProvider;
