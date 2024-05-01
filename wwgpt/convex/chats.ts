@@ -2,7 +2,7 @@ import { mutation } from './_generated/server';
 
 export const create = mutation({
     args: {},
-    handler: async (ctx, args) => {
+    handler: async (ctx) => {
         const identity = await ctx.auth.getUserIdentity();
         if (!identity) {
             throw new Error("Called create chat without logged in user!");
