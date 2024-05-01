@@ -1,8 +1,9 @@
 export default {
     providers: [
       {
-        domain: "https://witty-ray-99.clerk.accounts.dev/",
+        domain: "https://subtle-bluebird-90.clerk.accounts.dev/",
         applicationID: "convex",
       },
     ]
   };
+  
