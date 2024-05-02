@@ -1,4 +1,4 @@
-import { Siderbar } from "@/compononents/auth/sidebar";
+import { Siderbar } from "@/components/sidebar";
 
 interface ChatLayoutProps{
     children: React.ReactNode;
