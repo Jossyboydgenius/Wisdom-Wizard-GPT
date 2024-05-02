@@ -17,7 +17,7 @@ export const ConvexClientProvider = ({
     children
 }: ConvexClientProviderProps) => {
     return (
-        <ClerkProvider signUpFallbackRedirectUrl="/sign-up">
+        <ClerkProvider afterSignUpUrl="/sign-up">
             <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
                 <AuthLoading>
                     <Loading />
