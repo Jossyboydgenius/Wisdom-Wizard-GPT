@@ -19,6 +19,7 @@ export const store = mutation({
     if (user !== null) {
       return user._id;
     }
+
     // Create user in the database
     const userId = await ctx.db.insert("users", {
       tokenIdentifier: identity.tokenIdentifier,
