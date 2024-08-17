@@ -7,7 +7,7 @@ export const store = mutation({
     if (!identity) {
       throw new Error("Called store user without logged in user!");
     }
-
+    
     // Check if user exists in the database
     const user = await ctx.db
       .query("users")
