@@ -1,4 +1,4 @@
-import { Siderbar } from "@/components/sidebar";
+import { Sidebar } from "@/components/sidebar";
 
 interface ChatLayoutProps{
     children: React.ReactNode;
@@ -7,8 +7,9 @@ interface ChatLayoutProps{
 export default function ChatLayout({ children }: ChatLayoutProps) {
   return (
     <main className="flex h-full text-white">
-      <Siderbar />
-      <div className="h-full w-full">{children}</div>
+      <Sidebar />
+      <div className="h-full w-full">{children}
+      </div>
     </main>
   );
 }
