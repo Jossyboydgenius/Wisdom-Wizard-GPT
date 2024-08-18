@@ -1,4 +1,13 @@
-import { mutation } from './_generated/server';
+import { v } from 'convex/values';
+import { mutation, query } from './_generated/server';
+
+export const get = query({
+    args: { id: v.id("chats") },
+    handler: async (ctx, args) => {
+        return await ctx.db
+            .get(args.id);
+    },
+})
 
 export const create = mutation({
     args: {},
@@ -19,10 +28,11 @@ export const create = mutation({
 
         const chatId = await ctx.db.insert("chats", {
             userId: user._id,
-            title: "New Chat",
+            title: "New chat",
         });
+
         return chatId;
-    },
+    }
 });
 
 export const list = query({
@@ -30,7 +40,7 @@ export const list = query({
     handler: async (ctx) => {
         const identity = await ctx.auth.getUserIdentity();
         if (!identity) {
-            throw new Error("Called list chats without logged in user!");
+            throw new Error("Called list chats without logged in user!")
         }
 
         const user = await ctx.db
