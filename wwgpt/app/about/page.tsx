@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div>About</div>
+        <div>Welcome to Wisdom Wizard, where your mind would be blown away!</div>
     )
 }
 export default About;
