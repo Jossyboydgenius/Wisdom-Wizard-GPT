@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^4.32.3",
-    "@clerk/nextjs": "^5.3.1",
+    "@clerk/nextjs": "^5.3.2",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
