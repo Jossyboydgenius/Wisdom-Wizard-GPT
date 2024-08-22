@@ -1,12 +1,12 @@
 "use client";
 
-// import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { useUser } from "@clerk/clerk-react";
 import { useQuery } from "convex/react";
 import { useEffect, useRef, useState } from "react";
-// import { MessageBox } from "./message-box";
+import { MessageBox } from "./message-box";
 
 interface BodyProps {
     chatId: Id<"chats">;
