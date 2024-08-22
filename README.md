@@ -8,7 +8,7 @@ git clone https://github.com/Jossyboydgenius/Wisdom-Wizard-GPT.git
 
 ## Install packages
 ```bash
-cd nextjs14-chatgpt & npm install
+cd Wisdom-Wizard-GPT/wwgpt & npm install
 ```
 
 ## Run Convex
