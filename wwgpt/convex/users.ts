@@ -1,6 +1,7 @@
 import { v } from "convex/values";
 import { internalMutation, mutation, query } from "./_generated/server";
 
+
 export const store = mutation({
     args: {},
     handler: async (ctx) => {
