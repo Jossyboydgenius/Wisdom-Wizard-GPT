@@ -19,7 +19,7 @@ export const pay = action({
         }
 
         const stripe = new Stripe(process.env.NEXT_STRIPE_SECRET_KEY!, {
-            apiVersion: "2023-10-16"
+            apiVersion: "2024-06-20"
         });
 
         const domain = process.env.NEXT_PUBLIC_HOSTING_URL!;
@@ -53,7 +53,7 @@ export const fulfill = internalAction({
     args: { signature: v.string(), payload: v.string() },
     handler: async ({ runQuery, runMutation }, { signature, payload }) => {
         const stripe = new Stripe(process.env.NEXT_STRIPE_SECRET_KEY!, {
-            apiVersion: "2023-10-16",
+            apiVersion: "2024-06-20"
         });
 
         const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET as string;
