@@ -40,7 +40,7 @@ export const retrive = internalQuery({
 export const submit = action({
     args: { role: v.union(v.literal("user"), v.literal("assistant")), content: v.string(), chatId: v.id("chats") },
     handler: async (ctx, args) => {
-        const currentUser = await ctx.runQuery(api.users.currentUser, {});
+        const currentUser = await ctx.runQuery<typeof api.users.currentUser>(api.users.currentUser, {});
 
         if (currentUser === null) {
             throw new Error("User not found");
